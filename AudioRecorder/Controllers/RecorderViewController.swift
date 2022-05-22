@@ -41,7 +41,9 @@ class RecorderViewController: UIViewController {
 
     @IBAction func didTapRecordButton(_ sender: UIButton) {
         switch recordingState {
-            case .start: shouldStartRecording()
+            case .start:
+                shouldAddAnimatingView()
+                shouldStartRecording()
             case .stop:
                 stopButtonWasTapped = true
                 shouldStopAndSaveRecording()

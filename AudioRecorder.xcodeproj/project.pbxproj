@@ -13,6 +13,7 @@
 		048FE09B283AA71500ED85FE /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FE09A283AA71500ED85FE /* UIButtonExtension.swift */; };
 		048FE09D283AB59E00ED85FE /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FE09C283AB59E00ED85FE /* GeneralExtensions.swift */; };
 		048FE09F283AB77A00ED85FE /* MainViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FE09E283AB77A00ED85FE /* MainViewControllerExtension.swift */; };
+		048FE0A1283AD6EB00ED85FE /* RecorderViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FE0A0283AD6EB00ED85FE /* RecorderViewControllerExtension.swift */; };
 		04C1CB2A2839D5FC0072C7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1CB292839D5FC0072C7AA /* AppDelegate.swift */; };
 		04C1CB2C2839D5FC0072C7AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1CB2B2839D5FC0072C7AA /* SceneDelegate.swift */; };
 		04C1CB2E2839D5FC0072C7AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1CB2D2839D5FC0072C7AA /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		048FE09A283AA71500ED85FE /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		048FE09C283AB59E00ED85FE /* GeneralExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		048FE09E283AB77A00ED85FE /* MainViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExtension.swift; sourceTree = "<group>"; };
+		048FE0A0283AD6EB00ED85FE /* RecorderViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewControllerExtension.swift; sourceTree = "<group>"; };
 		04C1CB262839D5FC0072C7AA /* AudioRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C1CB292839D5FC0072C7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C1CB2B2839D5FC0072C7AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				048FE09A283AA71500ED85FE /* UIButtonExtension.swift */,
 				048FE09C283AB59E00ED85FE /* GeneralExtensions.swift */,
 				048FE09E283AB77A00ED85FE /* MainViewControllerExtension.swift */,
+				048FE0A0283AD6EB00ED85FE /* RecorderViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				04C1CB2A2839D5FC0072C7AA /* AppDelegate.swift in Sources */,
 				04C1CB452839D7930072C7AA /* CoreDataService.swift in Sources */,
 				04C1CB342839D5FC0072C7AA /* AudioRecorder.xcdatamodeld in Sources */,
+				048FE0A1283AD6EB00ED85FE /* RecorderViewControllerExtension.swift in Sources */,
 				048FE09B283AA71500ED85FE /* UIButtonExtension.swift in Sources */,
 				04C1CB2C2839D5FC0072C7AA /* SceneDelegate.swift in Sources */,
 				048FE093283AA3E100ED85FE /* RecorderViewController.swift in Sources */,

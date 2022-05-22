@@ -65,4 +65,47 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
+            
+            self.presentAlertFor(row: indexPath.row)
+            
+        }
+        
+        editAction.backgroundColor = UIColor(named: "editAction")
+        editAction.image = UIImage(systemName: "scissors.badge.ellipsis")
+        
+        let swipeAction = UISwipeActionsConfiguration(actions: [editAction])
+        
+        return swipeAction
+        
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            
+            let recordToDelete = CoreDataService.shared.recordedData[indexPath.row]
+            CoreDataService.shared.appViewContext().delete(recordToDelete)
+            CoreDataService.shared.recordedData.remove(at: indexPath.row)
+            
+            self.dataTableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+                self.dataTableView.reloadData()
+            }
+            
+            CoreDataService.shared.currentCoreData(state: .save)
+        }
+        
+        deleteAction.backgroundColor = UIColor(named: "deleteAction")
+        deleteAction.image = UIImage(systemName: "bin.mark.fill")
+        
+        let swipeAction = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return swipeAction
+        
+    }
+    
 }

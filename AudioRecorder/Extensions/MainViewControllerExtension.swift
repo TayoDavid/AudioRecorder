@@ -41,8 +41,28 @@ extension MainViewController {
     
     func presentAlertFor(row: Int) {
         let alertController = UIAlertController(title: "Edit Title", message: "Change recording title", preferredStyle: .alert)
+        let currentRecording = CoreDataService.shared.recordedData[row]
+        alertController.addTextField { textField in
+            textField.text = currentRecording.title
+        }
+        
+        let doneAction = UIAlertAction(title: "Done", style: .default) { _ in
+            
+            if let textfield = alertController.textFields?.first {
+                
+                currentRecording.title = textfield.text
+                CoreDataService.shared.currentCoreData(state: .save)
+                
+                // Reload Table View
+                self.dataTableView.reloadData()
+            }
+            
+        }
+        
+        alertController.addAction(doneAction)
         present(alertController, animated: true, completion: nil)
     }
+        
 }
 
 extension MainViewController: UpdateRecordingsDelegate {
